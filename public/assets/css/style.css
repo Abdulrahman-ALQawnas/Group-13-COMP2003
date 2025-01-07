@@ -1,0 +1,422 @@
+body {
+    font-family: 'Tajawal', sans-serif;
+    direction: rtl;
+}
+nav{
+    font-size: 18px;
+}
+.navbar-light .navbar-brand{
+    font-size: 32px;
+    color: #cda28d;
+}
+.navbar-light .navbar-brand{
+    color: #cda28d;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: black;
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
+    color: #cda28d;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #cda28d;
+}
+.LogNavBtn a, .RegNavBtn a{
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+.LogNavBtn a:hover,
+.LogNavBtn a:active{
+    color: #cda28d;
+    text-decoration: none;
+}
+.LogNavBtn i{
+    font-size: 24px;
+}
+.LogNavBtn i.fa-bell{
+    padding-top: 15px;
+}
+.nav-item.dropdown{
+    direction: ltr;
+}
+.profile{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+.dropdown-toggle::after{
+    color: black;
+    vertical-align: -0.270em;
+    margin-left: 0px;
+    border-top: .5em solid;
+}
+
+.carousel-item img{
+    border-radius: 30px;
+    height: 400px;
+}
+.features{
+    border: solid 1px lightgrey;
+    border-radius: 30px;
+    margin: -40px 50px 50px 50px;
+    background: white;
+    z-index: 999;
+    padding: 15px 0px;
+    position: relative;
+}
+.categories{
+    background: #eeeeee;
+    border-radius: 30px;
+    padding: 30px;
+}
+.categories p,
+.categoryName p,
+.advertisementName p,
+.advertisementFooter p.date{
+    color: #8f959b;
+}
+.categoryItem{
+    background: white;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+}
+.rate{
+    margin: 10px;
+    float: left;
+    background: #eeeeee;
+    border-radius: 30px;
+}
+.rate i{
+    color: #ffdb00;
+}
+.categoryImage{
+    padding: 30px;
+}
+.categoryImage img{
+    border-radius: 50%;
+    width: 100%;
+}
+.advertisements{
+    padding: 30px;
+}
+.advertisements h3{
+    color: #cda28d;
+}
+.advertisementItem{
+    border-radius: 30px;
+    border: solid 1px lightgrey;
+    padding: 0px;
+    margin: 10px;
+    width: 100%;
+    position: relative;
+}
+.advertisementImage img{
+    height: 300px;
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.advertisementName{
+    padding: 15px;
+}
+a.order{
+    display: block;
+    color: white;
+    background: #cda28d;
+    padding: 3px 5px;
+    border-radius: 20px;
+    text-decoration: none;
+    bottom: 0;
+}
+a.order:hover{
+    color: #cda28d;
+    background: white;
+    border: solid 1px #cda28d;
+}
+.pointer{
+    cursor: pointer;
+}
+.advertisementFooter{
+    padding: 0px 15px;
+}
+.advertisementFooter i {
+    color: #ffdb00;
+}
+footer{
+    background: #cda28d;
+    direction: rtl;
+    padding: 30px 5px 0px 5px;
+}
+footer h6{
+    color: white;
+}
+footer a{
+    color: white;
+    text-decoration: navajowhite;
+}
+footer a:hover{
+    color: white;
+}
+.social{
+    padding-top: 50px;
+}
+.socialItem{
+    background: white;
+    border-radius: 50%;
+    line-height: 1;
+    margin: 5px;
+}
+.socialItem:hover{
+    background: #cda28d;
+    border: solid 1px white;
+}
+.socialItem i{
+    color: #cda28d;
+    padding: 5px;
+}
+.socialItem i.fa-facebook-f{
+    padding: 5px 8px;
+}
+.socialItem i:hover{
+    color: white;
+}
+/******** about page ***********/
+.heroSection img{
+    border-radius: 30px;
+}
+.aboutSection{
+    padding: 50px;
+}
+.aboutSection p{
+    margin: 50px 0px;
+    line-height: 3;
+}
+/****** advertisments page ********/
+.ads{
+    margin-top: 20px;
+    background: #eeeeee;
+    border-radius: 30px;
+}
+.advertisementItem{
+    background: white;
+}
+.advDetails{
+    padding-top: 50px;
+    margin: 30px 0px 30px 0px;
+}
+.advDetails img{
+    border-radius: 30px;
+}
+.details{
+    padding: 10px;
+}
+.details span{
+    color: #8f959b;
+}
+.details i{
+    margin: 5px;
+    font-size: 20px;
+    color: #ffdb00;
+}
+.details p{
+    color: #8f959b;
+}
+.advDetails img.smallItem{
+    width: 24%;
+    border-radius: 20px;
+}
+/********* add-adv page ******/
+.title{
+    background: #cda28d;
+    border-radius: 20px;
+}
+.title h1{
+    color: white;
+    padding: 20px;
+}
+.addAdv{
+    padding: 20px;
+    border-radius: 10px;
+}
+a.addAdv:hover{
+    text-decoration: none;
+}
+label{
+    font-size: 20px;
+}
+input[type= text]{
+    padding: 10px;
+}
+input[type=submit]{
+    padding: 20px;
+    background: #cda28d;
+    border: none;
+    border-radius: 20px;
+    color: white;
+}
+input[type=submit]:hover,
+input[type=submit]:active{
+    background: white;
+    border: solid 1px #cda28d;
+    color: #cda28d;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/****** profile page ********/
+.profileInfo{
+    border-radius: 20px;
+    border: solid 1px lightgrey;
+    box-shadow: lightgrey 2px 2px 2px 2px;
+}
+.profileInfo i{
+    color: #cda28d;
+}
+.profileImage{
+    width: 25%;
+    border: solid 1px lightgrey;
+    border-radius: 10px;
+}
+.editProfile{
+    background: #cda28d;
+    color: white;
+    border-radius: 10px;
+}
+.editProfile:hover{
+    text-decoration: none;
+    color: #cda28d;
+    border: solid 1px #cda28d;
+    background: white;
+}
+#imageUpload
+{
+    display: none;
+}
+
+#profileImage
+{
+    cursor: pointer;
+}
+.editIcon{
+    position: absolute;
+    bottom: -5px;
+    right: 37%;
+    color: white;
+    background: #ffdb00;
+    border-radius: 50%;
+    padding: 5px 4px;
+    font-size: 12px;
+}
+/****** login page ********/
+.loginSection{
+    height: 100vh;
+}
+.loginSection .row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.titl{
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    color: white;
+}
+.hero{
+    background: #cda28d;
+}
+.forget{
+    color: red;
+    font-size: 12px;
+}
+.login button{
+    background: #cda28d;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+.login button:hover{
+    background: white;
+    color: #cda28d;
+    border-radius: 10px;
+    cursor: pointer;
+    border: solid 1px #cda28d;
+}
+.login a{
+    display: block;
+    color: black;
+}
+/***** register page*****/
+.green{
+    color: #cda28d;
+}
+.brown_anchor{
+    display: inline !important;
+    padding: 0 !important;
+    color: #cda28d !important;
+}
+.form-control{
+    text-align: center;
+}
+form.login input{
+    position: relative;
+    right: 20%;
+}
+#about h3, #categories h3{
+  color: #cda28d;
+}
+.categoryImage img{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    left: 20%;
+}
+.edit{
+    color: white;
+    background: #cda28d;
+    position: absolute;
+    top: 10px;
+    left: 45px;
+    border-radius: 50%;
+    padding: 3px 5px;
+}
+.edit:hover{
+    color: #cda28d;
+    background: white;
+    border: solid 1px #cda28d;
+}
+.delete{
+    color: white;
+    background: #cda28d;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+    padding: 3px 5px;
+}
+.delete:hover{
+    color: #cda28d;
+    background: white;
+    border: solid 1px #cda28d;
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+    .categoryItem{
+        width: 31%;
+    }
+    .advertisementItem{
+        width: 31%;
+    }
+}
+@media (min-width: 1201px){
+    .categoryItem{
+        width: 31.2%;
+    }
+    .advertisementItem{
+        width: 23%;
+    }
+}
+
+
