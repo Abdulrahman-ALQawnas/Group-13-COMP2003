@@ -10,15 +10,23 @@ To see the Team tasks and Development stages you can follow Trello link bellow:
 https://trello.com/invite/b/673bd9ebf0f6621456aeae4c/ATTIfbc076789e59ae3eff8c15e1ab1bed08D71
 B8C25/group-13
 
-### Low Fidelity Design
-file contain initial prototype that analyse the main idea of the platform, you can find it on Low-fidelity branch
+### Design Documents
+file contain initial prototype that analyse the main idea of the platform, also you can see high fidelity design using figma
 
-### FrontEnd Implementation:
+### Minutes
+contain all details about meetings.
+
+### Trello Snapshot
+contain muliple snapshot about tasks flow on trello.
+
+### Source Code
+**AdvicePlatform-HTML file:**
 contain HTML web page with CSS, Js and assets images , you can found it on Frontend branch.
 
-### Backend Implementation:
+**AdvicePlatform-laravel file:**
 contain the last version of the platform which developed using Laravel Framework , the project contain the Database migrations
 of the project and the user interfaces. you can found it on the main brach
+
 **Set up a Laravel project structure and environment.**
 ``` bash
 composer global require laravel/installer
