@@ -70,9 +70,17 @@ class HomeController extends Controller
 **Use Laravel migrations to create and manage MySQL database schemas.**
 ```bash
 php artisan make:migration create_users_table
+```
+```bash
 php artisan make:migration create_courses_table
+```
+```bash
 php artisan make:migration create_advices_table
+```
+```bash
 php artisan make:migration create_chats_table
+```
+```bash
 php artisan make:migration create_reviews_table
 ```
 
