@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique()->nullable();
             $table->string('mobile')->unique();
             $table->string('password');
+            $table->tinyInteger('type')->default(1);
             $table->string('image')->nullable();
             $table->timestamps();
         });
