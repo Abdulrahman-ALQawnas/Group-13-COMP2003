@@ -21,3 +21,10 @@ Route::get('courses', ['uses' => 'HomeController@courses','as'=>'courses']);
 Route::get('single_course', ['uses' => 'HomeController@single_course','as'=>'single_course']);
 Route::get('advices', ['uses' => 'HomeController@advices','as'=>'advices']);
 Route::get('chat', ['uses' => 'HomeController@chat','as'=>'chat']);
+Route::get('profile', ['uses' => 'HomeController@profile','as'=>'profile']);
+
+// Route::group([
+//     'middleware'  => 'auth',
+// ], function() {
+// Route::get('profile', ['uses' => 'HomeController@profile','as'=>'profile']);
+// });

@@ -43,5 +43,7 @@ class HomeController extends Controller
     public function advices(){
         return view('advices');
     }
-    
+    public function profile(){
+        return view('profile');
+    }
 }
