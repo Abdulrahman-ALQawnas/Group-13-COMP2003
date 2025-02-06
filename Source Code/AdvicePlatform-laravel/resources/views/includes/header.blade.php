@@ -41,6 +41,12 @@
               <a href="{{route('login')}}"> Sign In</a>
               @endguest
               @auth('web')
+              <a href="/pages/profile.html">Profile</a>
+              </button>
+              <button
+                class="relative align-middle focus:outline-none focus:shadow-outline-purple text-white bg-[#2B819F] w-[131px] h-[44px] rounded-full font-bold"
+
+              >
               <a href="{{route('logout')}}">logout</a>
               @endauth
               </button>
