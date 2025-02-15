@@ -18,7 +18,7 @@ class CreateNotoficationsTable extends Migration
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->string('title');
             $table->text('description');
-            $table->bool('read')->default(0);
+            $table->boolean('read')->default(0);
             $table->datetime('read_at')->nullable;
             $table->timestamps();
         });
