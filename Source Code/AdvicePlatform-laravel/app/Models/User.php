@@ -54,6 +54,10 @@ class User extends Authenticatable
     {
         return $this->belongsTo(specialization::class);
     }
+    public function follower(): BelongsTo
+    {
+        return $this->belongsTo(Follower::class);
+    }
 
     /**
      * @return int

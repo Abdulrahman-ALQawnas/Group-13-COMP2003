@@ -6,10 +6,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Collage extends Authenticatable
+class Report extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
     /**
@@ -18,16 +18,16 @@ class Collage extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
-        'title',
-        'image',
-        'description',
+        'user_id',
+        'reason',
+        'reported_at',
     ];
 
 
 
-    public function setImageAttribute($value)
+    public function user(): BelongsTo
     {
-        $this->attributes['image'] = Functions::StoreImageModel($value,'specializations/image');
+        return $this->belongsTo(User::class);
     }
 
     /**
@@ -49,48 +49,49 @@ class Collage extends Authenticatable
     /**
      * @return mixed
      */
-    public function getTitle()
+    public function getUserId()
     {
-        return $this->title;
+        return $this->user_id;
     }
 
     /**
-     * @param mixed $title
+     * @param mixed $user_id
      */
-    public function setTitle($title): void
+    public function setUserId($user_id): void
     {
-        $this->title = $title;
+        $this->user_id = $user_id;
     }
 
     /**
      * @return mixed
      */
-    public function getImage()
+    public function getReason()
     {
-        return $this->image;
+        return $this->reason;
     }
 
     /**
-     * @param mixed $image
+     * @param mixed $reason
      */
-    public function setImage($image): void
+    public function setReason($reason): void
     {
-        $this->image = $image;
+        $this->reason = $reason;
     }
+
     /**
      * @return mixed
      */
-    public function getDescription()
+    public function getReportedAt()
     {
-        return $this->description;
+        return $this->reported_at;
     }
 
     /**
-     * @param mixed $description
+     * @param mixed $reported_at
      */
-    public function setDescription($description): void
+    public function setReportedAt($reported_at): void
     {
-        $this->description = $description;
+        $this->reported_at = $reported_at;
     }
 
 }

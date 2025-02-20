@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Specialization extends Authenticatable
 {
@@ -95,6 +96,21 @@ class Specialization extends Authenticatable
     public function setDescription($description): void
     {
         $this->description = $description;
+    }
+     /**
+     * @return int
+     */
+    public function getCollageId(): int
+    {
+        return $this->collage_id;
+    }
+
+    /**
+     * @param int $collage_id
+     */
+    public function setCollageId(int $collage_id): void
+    {
+        $this->collage_id = $collage_id;
     }
 
 }

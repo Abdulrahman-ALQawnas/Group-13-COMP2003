@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNotoficationsTable extends Migration
+class CreateReportsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateNotoficationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('notofications', function (Blueprint $table) {
+        Schema::create('reports', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
-            $table->string('title');
-            $table->text('description');
-            $table->boolean('read')->default(0);
-            $table->datetime('read_at')->nullable;
+            $table->foreignId('user_id')->refernces('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->text('reason')->nullable();
+            $table->datetime('reported_at');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateNotoficationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('notofications');
+        Schema::dropIfExists('reports');
     }
 }

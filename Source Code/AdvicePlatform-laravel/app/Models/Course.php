@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Course extends Authenticatable
 {
@@ -21,11 +22,16 @@ class Course extends Authenticatable
         'title',
         'image',
         'description',
+        'specialization_id'
     ];
 
     public function specialization(): BelongsTo
     {
         return $this->belongsTo(Specialization::class);
+    }
+    public function follower(): BelongsTo
+    {
+        return $this->belongsTo(Follower::class);
     }
 
     public function setImageAttribute($value)
@@ -95,5 +101,21 @@ class Course extends Authenticatable
     {
         $this->description = $description;
     }
+     /**
+     * @return int
+     */
+    public function getSpecializationId(): int
+    {
+        return $this->specialization_idid;
+    }
+
+    /**
+     * @param int $specialization_id
+     */
+    public function setSpecializationId(int $specialization_id): void
+    {
+        $this->specialization_id = $specialization_id;
+    }
+
 
 }
