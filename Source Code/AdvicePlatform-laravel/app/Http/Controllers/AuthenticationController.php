@@ -27,7 +27,7 @@ class AuthenticationController extends Controller
     //     $this->middleware('auth')->except(['login','register', 'index']);
     // }
 
-    public function login(Request $request)
+    public function signin(Request $request)
     {
         $data = $request->all();
 
@@ -45,21 +45,12 @@ class AuthenticationController extends Controller
     public function signup(Request $request)
     {
 
-        request()->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users',
-            'mobile' => 'required|unique:users|max:10',
-            'type' => 'required|in:'.Constant::USER_TYPE_RULES,
-            'spectialization_id' => 'required|exists:specializations,id',
-            'password' => 'required|min:6|max:8'
-        ]);
-
         $user = new User();
         $user->setName($request->name);
         $user->setMobile($request->mobile);
         $user->setEmail($request->email);
         $user->setType($request->type);
-        $user->setSpecializationId($request->spectialization_id);
+        $user->setSpectializationId($request->spectialization_id);
         $user->setPassword($request->password);
         $user->save();
         return redirect()->route('login');

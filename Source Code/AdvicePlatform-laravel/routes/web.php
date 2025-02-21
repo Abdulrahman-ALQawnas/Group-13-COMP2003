@@ -24,7 +24,7 @@ Route::get('chat', ['uses' => 'HomeController@chat','as'=>'chat']);
 Route::get('profile', ['uses' => 'HomeController@profile','as'=>'profile']);
 
 Route::post('signup', ['uses' => 'AuthenticationController@signup','as'=>'signup']);
-Route::post('login', ['uses' => 'AuthenticationController@login', 'as'=>'signin']);
+Route::post('signin', ['uses' => 'AuthenticationController@signin', 'as'=>'signin']);
 
 // Route::group([
 //     'middleware'  => 'auth',

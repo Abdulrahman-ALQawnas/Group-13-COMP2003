@@ -25,7 +25,8 @@
                   Sign In to Your Account
                 </p>
               </div>
-              <form class="flex flex-col mt-8 w-full max-md:max-w-full">
+              <form class="flex flex-col mt-8 w-full max-md:max-w-full" action="{{route('signin')}}" method="post">
+                @csrf
                 <div class="flex flex-col w-full max-md:max-w-full">
                   <div
                     class="flex flex-col w-full text-lg font-medium text-neutral-400 max-md:max-w-full"

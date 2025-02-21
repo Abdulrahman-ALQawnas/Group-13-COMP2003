@@ -3,14 +3,18 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Helpers\Functions;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Passport\HasApiTokens;
+use Illuminate\Support\Facades\Hash;
 
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
+    use Notifiable,HasApiTokens;
 
     /**
      * The attributes that are mass assignable.
@@ -110,6 +114,22 @@ class User extends Authenticatable
     /**
      * @return mixed
      */
+    public function getMobile()
+    {
+        return $this->mobile;
+    }
+
+    /**
+     * @param mixed $mobile
+     */
+    public function setMobile($mobile): void
+    {
+        $this->mobile = $mobile;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getType()
     {
         return $this->type;
@@ -125,17 +145,17 @@ class User extends Authenticatable
         /**
      * @return mixed
      */
-    public function getSpecializationId()
+    public function getSpectializationId()
     {
-        return $this->specialization_id;
+        return $this->spectialization_id;
     }
 
     /**
-     * @param mixed $specialization_id
+     * @param mixed $spectialization_id
      */
-    public function setSpecializationId($specialization_id): void
+    public function setSpectializationId($spectialization_id): void
     {
-        $this->specialization_id = $specialization_id;
+        $this->spectialization_id = $spectialization_id;
     }
 
     /**
@@ -152,6 +172,21 @@ class User extends Authenticatable
     public function setImage($image): void
     {
         $this->image = Functions::StoreImageModel($image,'users/image');
+    }
+    /**
+     * @return mixed
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param mixed $password
+     */
+    public function setPassword($password): void
+    {
+        $this->password = Hash::make($password);
     }
 
 }
