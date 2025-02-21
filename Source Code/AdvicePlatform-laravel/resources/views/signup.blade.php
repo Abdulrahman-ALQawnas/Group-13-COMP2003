@@ -26,32 +26,21 @@
                   Create Your Account to Get Started
                 </p>
               </div>
-              <form class="flex flex-col mt-8 w-full max-md:max-w-full">
+              <form class="flex flex-col mt-8 w-full max-md:max-w-full" action="{{route('signup')}}" method="post">
+                @csrf
                 <div class="flex gap-6 w-full max-md:max-w-full">
-                  <div
-                    class="flex flex-col w-full text-lg font-medium text-neutral-400 max-md:max-w-full"
-                  >
-                    <div
-                      class="flex flex-col w-full whitespace-nowrap rounded-xl max-md:max-w-full"
-                    >
-                      <label for="email" class="sr-only">Email</label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        class="px-4 py-4 bg-white rounded-xl border border-solid border-neutral-400 border-opacity-30 max-md:pr-5 max-md:max-w-full"
-                        placeholder="Email"
-                        required
-                        aria-required="true"
-                      />
+                  <div class="flex flex-col w-full text-lg font-medium text-neutral-400 max-md:max-w-full">
+                  <div class="flex flex-col w-full whitespace-nowrap rounded-xl max-md:max-w-full">
+                      <label for="name" class="sr-only">Name</label>
+                      <input type="name" id="name" name="name" class="px-4 py-4 bg-white rounded-xl border border-solid border-neutral-400 border-opacity-30 max-md:pr-5 max-md:max-w-full" placeholder="Name" required aria-required="true"/>
                     </div>
-                    <div
-                      class="flex flex-col mt-4 w-full whitespace-nowrap rounded-none max-md:max-w-full"
-                    >
+                    <div class="flex flex-col mt-4 w-full whitespace-nowrap rounded-xl max-md:max-w-full">
+                      <label for="email" class="sr-only">Email</label>
+                      <input type="email" id="email" name="email" class="px-4 py-4 bg-white rounded-xl border border-solid border-neutral-400 border-opacity-30 max-md:pr-5 max-md:max-w-full" placeholder="Email" required aria-required="true"/>
+                    </div>
+                    <div class="flex flex-col mt-4 w-full whitespace-nowrap rounded-none max-md:max-w-full">
                       <label for="password" class="sr-only">Password</label>
-                      <div
-                        class="flex flex-wrap gap-5 justify-between px-4 py-4 bg-white rounded-xl border border-solid border-neutral-400 border-opacity-30 max-md:max-w-full"
-                      >
+                      <div class="flex flex-wrap gap-5 justify-between px-4 py-4 bg-white rounded-xl border border-solid border-neutral-400 border-opacity-30 max-md:max-w-full">
                         <input
                           type="password"
                           id="password"
@@ -104,9 +93,9 @@
                     >
                       <label for="phone" class="sr-only">Phone Number</label>
                       <input
-                        type="email"
-                        id="phone"
-                        name="number"
+                        type="text"
+                        id="mobile"
+                        name="mobile"
                         class="px-4 py-4 bg-white rounded-xl border border-solid border-neutral-400 border-opacity-30 max-md:pr-5 max-md:max-w-full"
                         placeholder="Phone Number"
                         required
@@ -117,25 +106,25 @@
                       <label for="is-student" class="text-gray-700">Student in Plymouth University</label>
                       <div class="flex gap-2 items-center">
                         <label class="flex gap-2 items-center">
-                          <input type="radio" name="is-student" value="yes" class="shrink-0 my-auto w-6 h-6" /> Yes
+                          <input type="radio" name="type" value="1" class="shrink-0 my-auto w-6 h-6" /> Yes
                         </label>
                         <label class="flex gap-2 items-center">
-                          <input type="radio" name="is-student" value="no" class="shrink-0 my-auto w-6 h-6" /> No
+                          <input type="radio" name="type" value="2" class="shrink-0 my-auto w-6 h-6" /> No
                         </label>
                       </div>
                     </div>
 
                     <div class="flex flex-col mt-4 w-full rounded-none max-md:max-w-full">
-                      <label for="course" class="sr-only">Choose Course</label>
+                      <label for="spectialization_id" class="sr-only">Choose Course</label>
                       <div class="flex flex-wrap gap-5 justify-between px-4 py-4 bg-white rounded-xl border border-solid border-neutral-400 border-opacity-30 max-md:max-w-full">
-                        <select id="course" name="course" class="grow bg-transparent border-none outline-none">
-                          <option value="" disabled selected>Choose Course</option>
-                          <option value="math">Engineering & Mathematics</option>
-                          <option value="science">Computer Science</option>
-                          <option value="history">Business</option>
-                          <option value="programming">Medical School</option>
-                          <option value="programming">Psychology</option>
-                          <option value="programming">Art, Design and Architecture</option>
+                        <select id="spectialization_id" name="spectialization_id" class="grow bg-transparent border-none outline-none">
+                          <option value="" disabled selected>Choose Spectialization</option>
+                          <option value="1">Engineering & Mathematics</option>
+                          <option value="2">Computer Science</option>
+                          <option value="3">Business</option>
+                          <option value="4">Medical School</option>
+                          <option value="5">Psychology</option>
+                          <option value="6">Art, Design and Architecture</option>
                         </select>
                       </div>
                     </div>

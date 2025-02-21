@@ -3,7 +3,7 @@
     <div class="flex flex-col items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900 relative">
       <!-- Background Image -->
       <div class="absolute bottom-0 right-8 mr-[10.5rem] z-0">
-        <img src="../assets/img/school-students.png" alt="">
+        <img src="{{asset('assets/img/school-students.png')}}" alt="">
       </div>
 
       <div

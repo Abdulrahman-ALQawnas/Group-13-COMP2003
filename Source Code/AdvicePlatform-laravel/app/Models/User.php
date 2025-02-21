@@ -106,6 +106,37 @@ class User extends Authenticatable
     {
         $this->email = $email;
     }
+    
+    /**
+     * @return mixed
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param mixed $type
+     */
+    public function setType($type): void
+    {
+        $this->type = $type;
+    }
+        /**
+     * @return mixed
+     */
+    public function getSpecializationId()
+    {
+        return $this->specialization_id;
+    }
+
+    /**
+     * @param mixed $specialization_id
+     */
+    public function setSpecializationId($specialization_id): void
+    {
+        $this->specialization_id = $specialization_id;
+    }
 
     /**
      * @return mixed
