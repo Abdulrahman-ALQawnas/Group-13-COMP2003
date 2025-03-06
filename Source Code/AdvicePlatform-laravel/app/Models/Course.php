@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Course extends Authenticatable
 {
@@ -32,6 +33,11 @@ class Course extends Authenticatable
     public function follower(): BelongsTo
     {
         return $this->belongsTo(Follower::class);
+    }
+
+    public function reviews(): HasMany
+    {
+        return $this->hasmany(Review::class);
     }
 
     public function setImageAttribute($value)
@@ -102,17 +108,17 @@ class Course extends Authenticatable
         $this->description = $description;
     }
      /**
-     * @return int
+     * @return mixed
      */
-    public function getSpecializationId(): int
+    public function getSpecializationId()
     {
         return $this->specialization_idid;
     }
 
     /**
-     * @param int $specialization_id
+     * @param mixed $specialization_id
      */
-    public function setSpecializationId(int $specialization_id): void
+    public function setSpecializationId($specialization_id): void
     {
         $this->specialization_id = $specialization_id;
     }

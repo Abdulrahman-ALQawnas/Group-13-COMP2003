@@ -26,6 +26,8 @@ class User extends Authenticatable
         'email',
         'mobile',
         'image',
+        'bio',
+        'system_mode',
         'type',
         'spectialization_id',
         'password',
@@ -94,6 +96,21 @@ class User extends Authenticatable
     {
         $this->name = $name;
     }
+    /**
+     * @return mixed
+     */
+    public function getBio()
+    {
+        return $this->bio;
+    }
+
+    /**
+     * @param mixed $bio
+     */
+    public function setBio($bio): void
+    {
+        $this->bio = $bio;
+    }
 
     /**
      * @return mixed
@@ -141,6 +158,22 @@ class User extends Authenticatable
     public function setType($type): void
     {
         $this->type = $type;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSystemMode()
+    {
+        return $this->system_mode;
+    }
+
+    /**
+     * @param mixed $system_mode
+     */
+    public function setSystemMode($system_mode): void
+    {
+        $this->system_mode = $system_mode;
     }
         /**
      * @return mixed

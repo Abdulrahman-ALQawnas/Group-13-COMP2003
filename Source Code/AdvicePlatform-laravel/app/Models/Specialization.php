@@ -21,6 +21,7 @@ class Specialization extends Authenticatable
     protected $fillable = [
         'title',
         'image',
+        'collage_id',
         'description',
     ];
 
@@ -98,17 +99,17 @@ class Specialization extends Authenticatable
         $this->description = $description;
     }
      /**
-     * @return int
+     * @return mixed
      */
-    public function getCollageId(): int
+    public function getCollageId()
     {
         return $this->collage_id;
     }
 
     /**
-     * @param int $collage_id
+     * @param mixed $collage_id
      */
-    public function setCollageId(int $collage_id): void
+    public function setCollageId($collage_id): void
     {
         $this->collage_id = $collage_id;
     }
