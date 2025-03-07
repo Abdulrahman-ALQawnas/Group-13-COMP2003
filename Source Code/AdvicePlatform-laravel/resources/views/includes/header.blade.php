@@ -26,31 +26,56 @@
           <!-- Search input -->
         
           <ul class="flex items-center flex-shrink-0 space-x-6">
-
-            
-           
-            
-             
-            </li>
+          @auth('web')
+            <!-- Notification Button -->
+            @php
+                $notifications = \App\Models\Notification::where('user_id', auth()->user()->getId())->whereNull('read_at')->orderBy('created_at')->get();
+            @endphp
             <li class="relative">
-              <button
-                class="relative align-middle focus:outline-none focus:shadow-outline-purple text-white bg-[#2B819F] w-[131px] h-[44px] rounded-full font-bold"
-               
-              >
+              <button id="notificationBtn" class="relative align-middle focus:outline-none focus:shadow-outline-purple text-white bg-[#2B819F] w-[44px] h-[44px] rounded-full flex justify-center items-center">
+                <span class="relative">
+                  🔔
+                  @if(count($notifications)>0)<span id="notificationCount" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">
+                    {{count($notifications)}}
+                  </span>@endif
+                </span>
+              </button>
+              <!-- Notification Dropdown -->
+              <div id="notificationDropdown" class="absolute right-0 mt-2 w-64 bg-white shadow-lg rounded-lg p-4 hidden">
+                <div class="flex items-center justify-between mb-3">
+                  <p class="font-bold text-gray-800">Notifications</p>
+                  <!-- Toggle Switch -->
+                  <label class="flex items-center cursor-pointer">
+                    <input type="checkbox" id="notificationToggle" class="sr-only peer" checked />
+                    <div class="w-10 h-5 bg-gray-300 rounded-full peer-checked:bg-blue-600 relative transition">
+                      <div class="w-4 h-4 bg-white rounded-full absolute top-0.5 left-0.5 peer-checked:left-5 transition"></div>
+                    </div>
+                  </label>
+                </div>
+
+                <ul id="notificationList" class="mt-2 space-y-2">
+                @foreach($notifications as $notification)
+                  <li class="p-2 bg-gray-100 rounded-md">{{$notification->title}}</li>
+                  @endforeach
+                </ul>
+              </div>
+            </li>
+            @endauth
+            <li class="relative">
+              <button class="relative align-middle focus:outline-none focus:shadow-outline-purple text-white bg-[#2B819F] w-[131px] h-[44px] rounded-full font-bold">
               @guest('web')
               <a href="{{route('login')}}"> Sign In</a>
               @endguest
               @auth('web')
-              <a href="{{route('profile')}}">Profile</a>
+              <a href="{{route('my_profile')}}">Profile</a>
               </button>
-              <button
-                class="relative align-middle focus:outline-none focus:shadow-outline-purple text-white bg-[#2B819F] w-[131px] h-[44px] rounded-full font-bold"
-
-              >
-              <a href="{{route('index')}}">logout</a>
+              <button class="relative align-middle focus:outline-none focus:shadow-outline-purple text-white bg-[#2B819F] w-[131px] h-[44px] rounded-full font-bold">
+              <a href="#logout_form" onclick="event.preventDefault(); document.getElementById('logout_form').submit();">logout</a>
+              <form method="POST" id="logout_form" action="{{ route('logout') }}" style="display: none;">
+                @csrf
+            </form>
               @endauth
               </button>
-             
             </li>
            
           </ul>

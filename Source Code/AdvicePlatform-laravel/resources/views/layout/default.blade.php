@@ -8,7 +8,22 @@
 
         @yield('content')
 </div>
+<script>
+      document.getElementById("notificationBtn").addEventListener("click", function () {
+        let dropdown = document.getElementById("notificationDropdown");
+        dropdown.classList.toggle("hidden");
+      });
 
+      // Close dropdown when clicking outside
+      document.addEventListener("click", function (event) {
+        let dropdown = document.getElementById("notificationDropdown");
+        let button = document.getElementById("notificationBtn");
+
+        if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+          dropdown.classList.add("hidden");
+        }
+      });
+    </script>
 @yield('scripts')
 </body>
 </html>
