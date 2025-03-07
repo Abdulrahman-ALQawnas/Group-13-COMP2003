@@ -26,11 +26,12 @@
                   Update Your profile
                 </p>
               </div>
-              <form class="flex flex-col mt-8 w-full max-md:max-w-full">
+              <form class="flex flex-col mt-8 w-full max-md:max-w-full" method="GET" action="{{route('report', $user->id)}}">
+                
                 <!-- Profile Image -->
                 <div class="flex justify-center mb-6">
-                  <img
-                  src="../assets/img/profile.jpg"
+                  <img onclick="document.getElementById('image').click()" @if($user->image != null) src="{{asset($user->getImage())}}" 
+                        @else src="{{asset('assets/img/profile.jpg')}}" @endif
                     alt="Profile Image"
                     class="w-24 h-24 rounded-full border border-solid border-neutral-400 border-opacity-30"
                   />
@@ -44,10 +45,10 @@
                       type="text"
                       id="name"
                       name="name"
-                      value="John Doe"
+                      value="{{($user)?$user->getName(): 'Enter your name'}}"
                       class="px-4 py-4 bg-white rounded-xl border border-solid border-neutral-400 border-opacity-30 max-md:max-w-full"
                       placeholder="Name"
-                      required
+                      disabled
                     />
 
                     <!-- Email -->
@@ -55,21 +56,21 @@
                       type="email"
                       id="email"
                       name="email"
-                      value="jD6nI@example.com"
+                      value="{{($user)?$user->getEmail(): 'Enter your email'}}"
                       class="mt-4 px-4 py-4 bg-white rounded-xl border border-solid border-neutral-400 border-opacity-30 max-md:max-w-full"
                       placeholder="Email"
-                      required
+                      disabled
                     />
 
                     <!-- Student in Plymouth University Checkbox -->
                     <div class="flex flex-wrap gap-5 justify-between px-4 py-4 bg-white rounded-xl border border-solid border-neutral-400 border-opacity-30 mt-4 max-md:max-w-full">
-                      <label for="is-student" class="text-gray-700">Student in Plymouth University</label>
+                      <label for="type" class="text-gray-700">Student in Plymouth University</label>
                       <div class="flex gap-2 items-center">
                         <label class="flex gap-2 items-center">
-                          <input type="radio" name="is-student" value="yes" class="shrink-0 my-auto w-6 h-6"  checked/> Yes
+                          <input type="radio" name="type" value="yes" class="shrink-0 my-auto w-6 h-6"  @if($user->type == 1) checked = "checked" @endif/ disabled> Yes
                         </label>
                         <label class="flex gap-2 items-center">
-                          <input type="radio" name="is-student" value="no" class="shrink-0 my-auto w-6 h-6" /> No
+                          <input type="radio" name="type" value="no" class="shrink-0 my-auto w-6 h-6" @if($user->type == 2) checked = "checked" @endif disabled/> No
                         </label>
                       </div>
                     </div>
@@ -77,12 +78,12 @@
                     <!-- Description -->
                     <textarea
                       id="description"
-                      name="description"
+                      name="bio"
                       class="mt-4 px-4 py-4 bg-white rounded-xl border border-solid border-neutral-400 border-opacity-30 max-md:max-w-full"
                       placeholder="Description"
                       rows="3"
-
-                    >Write a description.</textarea>
+                      disabled
+                    >{{($user->bio)? $user->bio :'Write a description.'}}</textarea>
                   </div>
 
                   <!-- Right Column -->
@@ -91,55 +92,32 @@
                     <input
                       type="text"
                       id="phone"
-                      name="phone"
-                      value="+1 (123) 456-7890"
+                      name="mobile"
+                      value="{{$user->mobile}}"
                       class="px-4 py-4 bg-white rounded-xl border border-solid border-neutral-400 border-opacity-30 max-md:max-w-full"
                       placeholder="Phone Number"
-                      required
+                      disabled
                     />
 
-                    <!-- Password -->
+
+                    <!-- Specialization Dropdown -->
+                    <div class="flex flex-wrap gap-5 justify-between px-4 py-4 bg-white rounded-xl border border-solid border-neutral-400 border-opacity-30 mt-4 max-md:max-w-full">
                     <input
-                      type="password"
-                      id="password"
-                      name="password"
-                      class="mt-4 px-4 py-4 bg-white rounded-xl border border-solid border-neutral-400 border-opacity-30 max-md:max-w-full"
-                      placeholder="Password"
-                      value="1233445"
-                      required
+                      type="text"
+                      id="spectialization_id"
+                      name="spectialization_id"
+                      value="{{$user}}"
+                      class="px-4 py-4 bg-white rounded-xl border border-solid border-neutral-400 border-opacity-30 max-md:max-w-full"
+                      placeholder="specialization"
+                      disabled
                     />
-
-                    <!-- Course Dropdown -->
-                    <div class="flex flex-wrap gap-5 justify-between px-4 py-4 bg-white rounded-xl border border-solid border-neutral-400 border-opacity-30 mt-4 max-md:max-w-full">
-                      <select id="course" name="course" class="grow bg-transparent border-none outline-none">
-                        <option value="" disabled >Choose Course</option>
-                        <option value="math">Engineering & Mathematics</option>
-                        <option value="science">Computer Science</option>
-                        <option value="history"selected>Business</option>
-                        <option value="medical">Medical School</option>
-                        <option value="psychology">Psychology</option>
-                        <option value="art">Art, Design and Architecture</option>
-                      </select>
-                    </div>
-
-                    <!-- Dark Mode / Light Mode Toggle -->
-                    <div class="flex flex-wrap gap-5 justify-between px-4 py-4 bg-white rounded-xl border border-solid border-neutral-400 border-opacity-30 mt-4 max-md:max-w-full">
-                      <!-- <label for="is-student" class="text-gray-700">Student in Plymouth University</label> -->
-                      <div class="flex gap-2 items-center">
-                        <label class="flex gap-2 items-center">
-                          <input type="radio" name="is-student" value="yes" class="shrink-0 my-auto w-6 h-6" /> Dark Mode
-                        </label>
-                        <label class="flex gap-2 items-center">
-                          <input type="radio" name="is-student" value="no" class="shrink-0 my-auto w-6 h-6"  checked/> Light Mode
-                        </label>
-                      </div>
                     </div>
                   </div>
                 </div>
 
                 <!-- Logout Button -->
-                <button type="button" class="mt-7 w-full px-4 py-2 text-2xl font-semibold text-white bg-red-600 rounded-xl max-md:px-5">
-                  Logout
+                <button type="submit" class="mt-7 w-full px-4 py-2 text-2xl font-semibold text-white bg-red-600 rounded-xl max-md:px-5">
+                  Report
                 </button>
               </form>
 
