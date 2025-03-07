@@ -21,6 +21,7 @@ class Advice extends Authenticatable
         'course_id',
         'advice',
     ];
+    protected $table = "advices";
 
 
 

@@ -27,7 +27,7 @@
                 alt="Courses icon representing educational content"
               />
               <div class="flex flex-col mt-3 w-full">
-                <div class="text-2xl font-semibold text-cyan-700"><a href="{{route('courses')}}"> Courses</a></div>
+                <div class="text-2xl font-semibold text-cyan-700"><a href="{{route('collages')}}"> Collages</a></div>
                 <div class="mt-1.5 text-base font-medium text-slate-500">
                   Explore reviews and details for all courses.
                 </div>

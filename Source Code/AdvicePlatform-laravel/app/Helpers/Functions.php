@@ -9,6 +9,7 @@ use DateTime;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Str;
+use App\Traits\ResponseTrait;
 
 class Functions
 {
