@@ -62,5 +62,9 @@ class AuthenticationController extends Controller
         //     return redirect()->route('register');
         // }
     }
+    public function logout()
+    {
+            Auth::guard('web')->logout();
+            return redirect()->route('index');
+    }
 }
-
