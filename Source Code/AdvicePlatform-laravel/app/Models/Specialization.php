@@ -23,6 +23,7 @@ class Specialization extends Authenticatable
         'image',
         'collage_id',
         'description',
+        'bgColor'
     ];
 
     public function collage(): BelongsTo
@@ -112,6 +113,21 @@ class Specialization extends Authenticatable
     public function setCollageId($collage_id): void
     {
         $this->collage_id = $collage_id;
+    }
+    /**
+     * @return mixed
+     */
+    public function getBgColor()
+    {
+        return $this->bgColor;
+    }
+
+    /**
+     * @param mixed $bgColor
+     */
+    public function setBgColor($bgColor): void
+    {
+        $this->bgColor = $bgColor;
     }
 
 }

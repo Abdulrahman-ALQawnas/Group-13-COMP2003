@@ -23,7 +23,8 @@ class Course extends Authenticatable
         'title',
         'image',
         'description',
-        'specialization_id'
+        'specialization_id',
+        'bgColor'
     ];
 
     public function specialization(): BelongsTo
@@ -122,6 +123,20 @@ class Course extends Authenticatable
     {
         $this->specialization_id = $specialization_id;
     }
+    /**
+     * @return mixed
+     */
+    public function getBgColor()
+    {
+        return $this->bgColor;
+    }
 
+    /**
+     * @param mixed $bgColor
+     */
+    public function setBgColor($bgColor): void
+    {
+        $this->bgColor = $bgColor;
+    }
 
 }

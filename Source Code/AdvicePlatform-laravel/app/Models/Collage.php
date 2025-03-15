@@ -21,6 +21,7 @@ class Collage extends Authenticatable
         'title',
         'image',
         'description',
+        'bgColor',
     ];
 
 
@@ -60,6 +61,21 @@ class Collage extends Authenticatable
     public function setTitle($title): void
     {
         $this->title = $title;
+    }
+    /**
+     * @return mixed
+     */
+    public function getBgColor()
+    {
+        return $this->bgColor;
+    }
+
+    /**
+     * @param mixed $bgColor
+     */
+    public function setBgColor($bgColor): void
+    {
+        $this->bgColor = $bgColor;
     }
 
     /**
