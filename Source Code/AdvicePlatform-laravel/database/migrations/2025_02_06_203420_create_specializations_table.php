@@ -19,6 +19,7 @@ class CreateSpecializationsTable extends Migration
             $table->string('image');
             $table->text('description');
             $table->foreignId('collage_id');
+            $table->string('bgColor');
             $table->timestamps();
         });
     }

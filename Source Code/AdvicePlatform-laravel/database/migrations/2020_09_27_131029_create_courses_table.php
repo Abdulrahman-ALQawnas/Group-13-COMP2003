@@ -19,6 +19,7 @@ class CreateCoursesTable extends Migration
             $table->string('image');
             $table->text('description');
             $table->foreignId('specialization_id');
+            $table->string('bgColor');
             $table->timestamps();
         });
     }

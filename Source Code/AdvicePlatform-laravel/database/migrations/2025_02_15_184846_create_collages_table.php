@@ -18,6 +18,7 @@ class CreateCollagesTable extends Migration
             $table->string('name');
             $table->string('image');
             $table->text('description');
+            $table->string('bgColor');
             $table->timestamps();
         });
     }
