@@ -21,7 +21,6 @@ class Notification extends Model
         'read',
         'read_at'
     ];
-    protected $table = "notofications";
 
     public function user(): BelongsTo
     {

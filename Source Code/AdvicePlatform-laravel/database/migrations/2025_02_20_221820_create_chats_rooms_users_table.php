@@ -18,6 +18,7 @@ class CreateChatsRoomsUsersTable extends Migration
             $table->foreignId('chat_room_id');
             $table->foreignId('user_id');
             $table->integer('unread_messages')->default(0);
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
     }

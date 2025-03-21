@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 /**
  * @property integer id
  * @property mixed latest_user_id
+ *  * @property mixed course_id
  * @property mixed latest_message
  * @property mixed latest_type
  * @method ChatRoom find(mixed $chat_room_id)
@@ -17,7 +18,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class ChatRoom extends Model
 {
     protected $table = 'chats_rooms';
-    protected $fillable = ['latest_user_id','latest_message','latest_type'];
+    protected $fillable = ['latest_user_id','latest_message','latest_type','course_id'];
 
     public function latest_user(): belongsTo
     {
@@ -30,6 +31,10 @@ class ChatRoom extends Model
     public function chat_room_messages(): HasMany
     {
         return $this->hasMany(ChatRoomMessage::class,'chat_room_id');
+    }
+    public function course(): belongsTo
+    {
+        return $this->belongsTo(Course::class, 'course_id');
     }
     /**
      * @return int
@@ -93,6 +98,22 @@ class ChatRoom extends Model
     public function setLatestType($latest_type): void
     {
         $this->latest_type = $latest_type;
+    }
+    
+    /**
+     * @return mixed
+     */
+    public function getCourseId()
+    {
+        return $this->course_id;
+    }
+
+    /**
+     * @param mixed $course_id
+     */
+    public function setCourseId($course_id): void
+    {
+        $this->course_id = $course_id;
     }
 
 }

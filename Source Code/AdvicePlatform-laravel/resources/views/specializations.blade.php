@@ -20,10 +20,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5">
         @foreach($specializations as $specialization)
         <div class="...">
-          <div class="flex flex-col pb-9 @if($loop->iteration %2 == 0) bg-teal-400
-                                        @elseif($loop->iteration %2 == 1) bg-sky-700
-                                       @endif
-          rounded-xl border border-solid border-cyan-700 border-opacity-40">
+          <div class="flex flex-col pb-9 rounded-xl border border-solid border-cyan-700 border-opacity-40" style="background-color:{{$specialization->bgColor}}">
             <img loading="lazy" src="{{$specialization->image}}" alt="Engineering and Mathematics illustration" class="object-contain self-end max-w-full aspect-[1.54] w-[248px]" />
             <div class="flex flex-col pr-8 pl-4 mt-5 max-md:pr-5">
               <h2 class="text-2xl font-semibold text-white"><a href="{{route('courses', $specialization->id)}}">{{$specialization->name}}</a></h2>

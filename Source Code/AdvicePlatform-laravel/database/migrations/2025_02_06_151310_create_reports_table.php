@@ -17,6 +17,7 @@ class CreateReportsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->refernces('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->text('reason')->nullable();
+            $table->tinyInteger('type')->nullable();
             $table->datetime('reported_at');
             $table->timestamps();
         });

@@ -22,10 +22,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5">
         @foreach($courses as $course)
         <div class="...">
-          <div class="flex flex-col pb-9 @if($loop->iteration %2 == 0) bg-teal-400
-                                        @elseif($loop->iteration %2 == 1) bg-sky-700
-                                       @endif
-          rounded-xl border border-solid border-cyan-700 border-opacity-40">
+          <div class="flex flex-col pb-9 rounded-xl border border-solid border-cyan-700 border-opacity-40" style="background-color:{{$course->bgColor}}">
             <img loading="lazy" src="{{$course->image}}" alt="Engineering and Mathematics illustration" class="object-contain self-end max-w-full aspect-[1.54] w-[248px]" />
             <div class="flex flex-col pr-8 pl-4 mt-5 max-md:pr-5">
               <h2 class="text-2xl font-semibold text-white"><a href="{{route('single_course', $course->id)}}">{{$course->name}}</a></h2>
@@ -34,6 +31,30 @@
               </div>
             </div>
           </div>
+          @auth
+          @php 
+          $is_following = App\Models\Follower::where('user_id', auth()->user()->id)->exists();
+          @endphp
+          @if($is_following == false)
+          <div class="follow">
+          <button class="relative align-middle focus:outline-none focus:shadow-outline-purple border w-full h-[44px] rounded-md font-bold mt-5">
+          <a href="#follow_form" onclick="event.preventDefault(); document.getElementById('follow_form').submit();">Follow</a>
+              <form method="POST" id="follow_form" action="{{ route('follow', $course->id) }}" style="display: none;">
+                @csrf
+            </form>
+              </button>
+          </div>
+          @elseif($is_following == true)
+          <div class="unfollow">
+          <button class="relative align-middle focus:outline-none focus:shadow-outline-purple border w-full h-[44px] rounded-md font-bold mt-5">
+          <a href="#unfollow_form" onclick="event.preventDefault(); document.getElementById('unfollow_form').submit();">unFollow</a>
+              <form method="POST" id="unfollow_form" action="{{ route('unfollow', $course->id) }}" style="display: none;">
+                @csrf
+            </form>
+              </button>
+          </div>
+          @endif
+          @endauth
         </div>
         @endforeach
 </div>

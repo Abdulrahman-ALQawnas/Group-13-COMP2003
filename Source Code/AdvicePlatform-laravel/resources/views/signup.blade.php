@@ -119,12 +119,9 @@
                       <div class="flex flex-wrap gap-5 justify-between px-4 py-4 bg-white rounded-xl border border-solid border-neutral-400 border-opacity-30 max-md:max-w-full">
                         <select id="spectialization_id" name="spectialization_id" class="grow bg-transparent border-none outline-none">
                           <option value="" disabled selected>Choose Spectialization</option>
-                          <option value="1">Engineering & Mathematics</option>
-                          <option value="2">Computer Science</option>
-                          <option value="3">Business</option>
-                          <option value="4">Medical School</option>
-                          <option value="5">Psychology</option>
-                          <option value="6">Art, Design and Architecture</option>
+                          @foreach($specializations as $specialization)
+                          <option value="{{$specialization->id}}">{{$specialization->name}}</option>
+                          @endforeach
                         </select>
                       </div>
                     </div>

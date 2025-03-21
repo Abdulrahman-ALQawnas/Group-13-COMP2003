@@ -16,6 +16,7 @@ class CreateChatsRoomsTable extends Migration
         Schema::create('chats_rooms', function (Blueprint $table) {
             $table->id();
             $table->foreignId('latest_user_id')->nullable();
+            $table->foreignId('course_id');
             $table->text('latest_message')->nullable();
             $table->tinyInteger('latest_type')->nullable();
             $table->timestamps();
