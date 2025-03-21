@@ -77,7 +77,7 @@
                 alt="Map icon representing location features"
               />
               <div class="flex flex-col mt-2 w-full">
-                <div class="text-2xl font-semibold text-cyan-700"><a href="{{route('map')}}"> Map </a></div>
+                <div class="text-2xl font-semibold text-cyan-700"><a href="{{route('map', 1)}}"> Map </a></div>
                 <div class="mt-1.5 text-base font-medium text-slate-500">
                   Explore reviews and details for all courses.
                 </div>

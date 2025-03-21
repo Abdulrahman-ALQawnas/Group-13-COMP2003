@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', ['uses' => 'HomeController@index','as'=>'index']);
 Route::get('login', ['uses' => 'HomeController@login','as'=>'login']);
 Route::get('register', ['uses' => 'HomeController@Register','as'=>'register']);
-Route::get('map', ['uses' => 'HomeController@map','as'=>'map']);
+Route::get('map/{id}', ['uses' => 'HomeController@map','as'=>'map']);
 Route::get('courses/{specialization_id}', ['uses' => 'HomeController@courses','as'=>'courses']);
 Route::get('coursesSearch/{specialization_id}', ['uses' => 'HomeController@coursesSearch','as'=>'coursesSearch']);
 Route::get('specializations/{collage_id}', ['uses' => 'HomeController@specializations','as'=>'specializations']);

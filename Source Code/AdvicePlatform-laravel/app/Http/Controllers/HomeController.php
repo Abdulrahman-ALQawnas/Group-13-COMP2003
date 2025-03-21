@@ -13,6 +13,7 @@ use App\Models\ChatRoom;
 use App\Models\chatRoomMessage;
 use App\Models\chatRoomUser;
 use App\Models\Follower;
+use App\Models\Map;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -120,8 +121,10 @@ class HomeController extends Controller
                                     'specialization_id'=>$specialization_id,
                                     'courses'=> $courses,]);
     }
-    public function map(){
-        return view('map');
+
+    public function map($id){
+        $map = Map::where('id',$id)->first();
+        return view('map')->with(['map'=>$map]);
     }
     public function chatrooms(){
         $chatrooms = ChatRoom::paginate(10);

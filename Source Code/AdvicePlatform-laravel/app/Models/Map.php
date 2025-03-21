@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Map extends Model
 {
     use HasFactory;
-    protected $fillable = ['building_name', 'latitude', 'longitude'];
+    protected $fillable = ['building_name', 'location'];
 }
