@@ -661,6 +661,7 @@ class ComposerStaticInit7d64c77242a46f014def4e1d2ba491f5
         'App\\Models\\Collage' => __DIR__ . '/../..' . '/app/Models/Collage.php',
         'App\\Models\\Course' => __DIR__ . '/../..' . '/app/Models/Course.php',
         'App\\Models\\Follower' => __DIR__ . '/../..' . '/app/Models/Follower.php',
+        'App\\Models\\Map' => __DIR__ . '/../..' . '/app/Models/Map.php',
         'App\\Models\\Notification' => __DIR__ . '/../..' . '/app/Models/Notification.php',
         'App\\Models\\PasswordReset' => __DIR__ . '/../..' . '/app/Models/PasswordReset.php',
         'App\\Models\\Report' => __DIR__ . '/../..' . '/app/Models/Report.php',

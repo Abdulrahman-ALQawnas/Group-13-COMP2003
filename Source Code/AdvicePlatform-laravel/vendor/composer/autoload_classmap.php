@@ -34,6 +34,7 @@ return array(
     'App\\Models\\Collage' => $baseDir . '/app/Models/Collage.php',
     'App\\Models\\Course' => $baseDir . '/app/Models/Course.php',
     'App\\Models\\Follower' => $baseDir . '/app/Models/Follower.php',
+    'App\\Models\\Map' => $baseDir . '/app/Models/Map.php',
     'App\\Models\\Notification' => $baseDir . '/app/Models/Notification.php',
     'App\\Models\\PasswordReset' => $baseDir . '/app/Models/PasswordReset.php',
     'App\\Models\\Report' => $baseDir . '/app/Models/Report.php',
