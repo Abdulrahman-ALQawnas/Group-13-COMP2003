@@ -58,7 +58,7 @@ class User extends Authenticatable
 
     public function specialization(): BelongsTo
     {
-        return $this->belongsTo(specialization::class);
+        return $this->belongsTo(specialization::class, 'spectialization_id');
     }
     public function follower(): BelongsTo
     {
