@@ -96,28 +96,26 @@ class HomeController extends Controller
         $chatRoomUser->chat_room_id = $chatRoom->id;
         $chatRoomUser->user_id = $follower->user_id;
         $chatRoomUser->save();
-        $is_following = Follower::where('user_id',$follower->user_id)->exists();
+        // $is_following = Follower::where('user_id',$follower->user_id)->where('course_id', $follower->course_id)->exists();
         $course = Course::find($course_id);
         $specialization_id= $course->specialization_id;
         $specialization = Specialization::find($specialization_id);
         $courses = Course::where('specialization_id',$specialization_id )->paginate(9);
-        return view('courses')->with(['is_following'=> $is_following,
-                                    'collage_id'=> $specialization->getCollageId(),
+        return view('courses')->with(['collage_id'=> $specialization->getCollageId(),
                                     'specialization_id'=>$specialization_id,
                                     'courses'=> $courses,]);
     }
     public function unfollow($course_id){
-        $follower = Follower::where('user_id', auth()->user()->id)->delete();
+        $follower = Follower::where('user_id', auth()->user()->id)->where('course_id',$course_id)->delete();
         $chatRoomUser = chatRoomUser::where('user_id', auth()->user()->id)->first();
         $chatRoomUser->active = false;
         $chatRoomUser->save();
-        $is_following = Follower::where('user_id',auth()->user()->id)->exists();;
+        // $is_following = Follower::where('user_id',auth()->user()->id)->exists();;
         $course = Course::find($course_id);
         $specialization_id= $course->specialization_id;
         $specialization = Specialization::find($specialization_id);
         $courses = Course::where('specialization_id',$specialization_id )->paginate(9);
-        return view('courses')->with(['is_following'=> $is_following,
-                                    'collage_id'=> $specialization->getCollageId(),
+        return view('courses')->with(['collage_id'=> $specialization->getCollageId(),
                                     'specialization_id'=>$specialization_id,
                                     'courses'=> $courses,]);
     }
@@ -208,10 +206,10 @@ class HomeController extends Controller
             $user->name = $request->name;
             $user->email = $request->email;
             $user->mobile = $request->mobile;
+            $user->spectialization_id = $request->specialization_id;
             $user->bio = $request->bio;
             $user->type = $request->type;
             $user->system_mode = $request->system_mode;
-            $user->spectialization_id = $request->spectialization_id;
             $user->save();
             if($request->hasFile('image')){
                 $user->setImage($request->file('image'));

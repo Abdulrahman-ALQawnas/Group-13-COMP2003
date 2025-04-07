@@ -29,7 +29,7 @@
           @auth('web')
             <!-- Notification Button -->
             @php
-                $notifications = \App\Models\Notification::where('user_id', auth()->user()->getId())->whereNull('read_at')->orderBy('created_at')->get();
+                $notifications = \App\Models\Notification::where('user_id', auth()->user()->getId())->where('read', 0)->orderBy('created_at')->get();
             @endphp
             <li class="relative">
               <button id="notificationBtn" class="relative align-middle focus:outline-none focus:shadow-outline-purple text-white bg-[#2B819F] w-[44px] h-[44px] rounded-full flex justify-center items-center">

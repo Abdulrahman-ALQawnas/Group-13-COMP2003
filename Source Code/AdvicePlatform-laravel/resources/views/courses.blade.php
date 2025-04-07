@@ -33,7 +33,7 @@
           </div>
           @auth
           @php 
-          $is_following = App\Models\Follower::where('user_id', auth()->user()->id)->exists();
+          $is_following = App\Models\Follower::where('user_id', auth()->user()->id)->where('course_id',$course->id)->exists();
           @endphp
           @if($is_following == false)
           <div class="follow">

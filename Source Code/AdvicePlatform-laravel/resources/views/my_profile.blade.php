@@ -129,10 +129,10 @@
 
                     <!-- Specialization Dropdown -->
                     <div class="flex flex-wrap gap-5 justify-between px-4 py-4 bg-white rounded-xl border border-solid border-neutral-400 border-opacity-30 mt-4 max-md:max-w-full">
-                      <select id="spectialization_id" name="spectialization_id" class="grow bg-transparent border-none outline-none">
+                      <select id="specialization_id" name="specialization_id" class="grow bg-transparent border-none outline-none">
                         <option value="" disabled >Choose Specialization</option>
                         @foreach($specializations as $specialization)
-                        <option value="{{$specialization->id}}">{{$specialization->name}}</option>
+                        <option value="{{$specialization->id}}"  {{auth()->user()->spectialization_id == $specialization->id ? 'selected' : '' }}>{{$specialization->name}}</option>
                         @endforeach
                       </select>
                     </div>
