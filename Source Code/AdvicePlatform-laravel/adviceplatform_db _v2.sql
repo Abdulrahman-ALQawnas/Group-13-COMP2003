@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 21 مارس 2025 الساعة 12:21
+-- Generation Time: 09 أبريل 2025 الساعة 22:49
 -- إصدار الخادم: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- PHP Version: 8.1.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -139,7 +139,12 @@ INSERT INTO `collages` (`id`, `name`, `image`, `description`, `bgColor`, `create
 (4, 'Medical School', 'https://cdn.builder.io/api/v1/image/assets/TEMP/a260dd3fb42ca6d3f7bd3e0e3f49c1d4200cb4aaeed0aeaf5e54199f658a3edd?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Medical School', '#60a5fa', '2025-03-21 10:51:37', '2025-03-21 10:51:37'),
 (5, 'Psychology\r\n', 'https://cdn.builder.io/api/v1/image/assets/TEMP/530c08f0f5559ecb2993c6ad7ba56ded1eeaddb8196c8081c98fb3df2bce33dc?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Psychology\r\n', '#60a5fa', '2025-03-21 10:52:28', '2025-03-21 10:52:28'),
 (6, 'Art, Design and Architecture', 'https://cdn.builder.io/api/v1/image/assets/TEMP/18e8032e6825854ae7291cc651e10ccf62903952b87e30c20776efbf6154f891?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Art, Design and Architecture', '#22d3ee', '2025-03-21 10:53:35', '2025-03-21 10:53:35'),
-(7, 'Nursing and Midwifery', 'https://cdn.builder.io/api/v1/image/assets/TEMP/34bf7d38421aac0c79840b4fbf54b825b677454fe6321bfa9fbc6e836c0942c8?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Nursing and Midwifery', '#71717a', '2025-03-21 10:53:35', '2025-03-21 10:53:35');
+(7, 'Nursing and Midwifery', 'https://cdn.builder.io/api/v1/image/assets/TEMP/34bf7d38421aac0c79840b4fbf54b825b677454fe6321bfa9fbc6e836c0942c8?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Nursing and Midwifery', '#71717a', '2025-03-21 10:53:35', '2025-03-21 10:53:35'),
+(8, 'Society and culture', 'https://cdn.builder.io/api/v1/image/assets/TEMP/bcbf2a41a36dfaf1f771c122c7562b4cf1b7a0fd62a37b9cac7453d7c98f8fbc?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Society and culture', '#f87171', '2025-03-21 10:53:35', '2025-03-21 10:53:35'),
+(9, 'Biomedical Sciences', 'https://cdn.builder.io/api/v1/image/assets/TEMP/6d227000230bfa56722c9c4937c936d6cee67525ad20877a4d28600c6d04861f?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Biomedical Sciences', '#818cf8', '2025-03-21 10:53:35', '2025-03-21 10:53:35'),
+(10, 'Biological and Marine Sciences', 'https://cdn.builder.io/api/v1/image/assets/TEMP/deb492aaf2f96f0da3292cab7ac046052bd4d0a9daec8227c3f8f09b386b6722?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Biological and Marine Sciences', '#0f766e', '2025-03-21 10:53:35', '2025-03-21 10:53:35'),
+(11, 'Institute of Health Sciences', 'https://cdn.builder.io/api/v1/image/assets/TEMP/62651da8d408ea2ded3b98dadbad76638e3d1a4f21a138c9ac81b5402f630a5b?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Institute of Health Sciences', '#fb7185', '2025-03-21 10:53:35', '2025-03-21 10:53:35'),
+(12, 'Dentistry', 'https://cdn.builder.io/api/v1/image/assets/TEMP/e4a0b951f89f51b6d4191e74e5a0bf20c0f742219e436d9d7638d45ab2e3ed4b?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Dentistry', '#06b6d4', '2025-03-21 10:53:35', '2025-03-21 10:53:35');
 
 -- --------------------------------------------------------
 
@@ -170,7 +175,20 @@ INSERT INTO `courses` (`id`, `name`, `image`, `description`, `specialization_id`
 (5, 'Machine Learning', 'https://cdn.builder.io/api/v1/image/assets/TEMP/a454e3e7241da8cea4069bbd00adfa95c991e85948965c99af7749edf357aa47?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Machine Learning', 1, '#0369a1', '2025-03-21 11:04:19', '2025-03-21 11:04:19'),
 (6, 'Computational Intelligence', 'https://cdn.builder.io/api/v1/image/assets/TEMP/a454e3e7241da8cea4069bbd00adfa95c991e85948965c99af7749edf357aa47?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Computational Intelligence', 1, '#fdba74', '2025-03-21 11:04:19', '2025-03-21 11:04:19'),
 (7, 'BSc (Hons)', 'https://cdn.builder.io/api/v1/image/assets/TEMP/a454e3e7241da8cea4069bbd00adfa95c991e85948965c99af7749edf357aa47?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'BSc (Hons)', 2, '#0369a1', '2025-03-21 11:04:19', '2025-03-21 11:04:19'),
-(8, ' MSc Cyber Security', 'https://cdn.builder.io/api/v1/image/assets/TEMP/a454e3e7241da8cea4069bbd00adfa95c991e85948965c99af7749edf357aa47?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', ' MSc Cyber Security', 2, '#fdba74', '2025-03-21 11:04:19', '2025-03-21 11:04:19');
+(8, ' MSc Cyber Security', 'https://cdn.builder.io/api/v1/image/assets/TEMP/a454e3e7241da8cea4069bbd00adfa95c991e85948965c99af7749edf357aa47?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', ' MSc Cyber Security', 2, '#fdba74', '2025-03-21 11:04:19', '2025-03-21 11:04:19'),
+(9, 'BEng (Hons) Mechanical Engineering', 'https://cdn.builder.io/api/v1/image/assets/TEMP/a454e3e7241da8cea4069bbd00adfa95c991e85948965c99af7749edf357aa47?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'BEng (Hons) Mechanical Engineering', 3, '#2dd4bf', '2025-03-21 11:04:19', '2025-03-21 11:04:19'),
+(10, 'MEng (Hons) Mechanical Engineering', 'https://cdn.builder.io/api/v1/image/assets/TEMP/a454e3e7241da8cea4069bbd00adfa95c991e85948965c99af7749edf357aa47?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'MEng (Hons) Mechanical Engineering', 3, '#fdba74', '2025-03-21 11:04:19', '2025-03-21 11:04:19'),
+(11, 'MSc Offshore Renewable Energy', 'https://cdn.builder.io/api/v1/image/assets/TEMP/a454e3e7241da8cea4069bbd00adfa95c991e85948965c99af7749edf357aa47?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'MSc Offshore Renewable Energy', 3, '#60a5fa', '2025-03-21 11:04:19', '2025-03-21 11:04:19'),
+(12, 'AI Academy - Mahara Tech', 'https://cdn.builder.io/api/v1/image/assets/TEMP/a454e3e7241da8cea4069bbd00adfa95c991e85948965c99af7749edf357aa47?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'AI Academy - Mahara Tech', 1, '#2dd4bf', '2025-03-21 11:04:19', '2025-03-21 11:04:19'),
+(13, 'AUC School of Continuing Education', 'https://cdn.builder.io/api/v1/image/assets/TEMP/a454e3e7241da8cea4069bbd00adfa95c991e85948965c99af7749edf357aa47?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'AUC School of Continuing Education', 1, '#fdba74', '2025-03-21 11:04:19', '2025-03-21 11:04:19'),
+(14, 'Information Technology Institute', 'https://cdn.builder.io/api/v1/image/assets/TEMP/a454e3e7241da8cea4069bbd00adfa95c991e85948965c99af7749edf357aa47?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Information Technology Institute', 1, '#f87171', '2025-03-21 11:04:19', '2025-03-21 11:04:19'),
+(15, 'AUC', 'https://cdn.builder.io/api/v1/image/assets/TEMP/a454e3e7241da8cea4069bbd00adfa95c991e85948965c99af7749edf357aa47?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'AUC', 2, '#f87171', '2025-03-21 11:04:19', '2025-03-21 11:04:19'),
+(16, 'Cybersecurity Training', 'https://cdn.builder.io/api/v1/image/assets/TEMP/a454e3e7241da8cea4069bbd00adfa95c991e85948965c99af7749edf357aa47?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Cybersecurity Training', 2, '#71717a', '2025-03-21 11:04:19', '2025-03-21 11:04:19'),
+(17, 'EC-Council Training', 'https://cdn.builder.io/api/v1/image/assets/TEMP/a454e3e7241da8cea4069bbd00adfa95c991e85948965c99af7749edf357aa47?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'EC-Council Training', 2, '#f87171', '2025-03-21 11:04:19', '2025-03-21 11:04:19'),
+(18, 'BEng', 'https://cdn.builder.io/api/v1/image/assets/TEMP/a454e3e7241da8cea4069bbd00adfa95c991e85948965c99af7749edf357aa47?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'BEng', 4, '#2dd4bf', '2025-03-21 11:04:19', '2025-03-21 11:04:19'),
+(19, 'MEng ', 'https://cdn.builder.io/api/v1/image/assets/TEMP/a454e3e7241da8cea4069bbd00adfa95c991e85948965c99af7749edf357aa47?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'MEng ', 4, '#fdba74', '2025-03-21 11:04:19', '2025-03-21 11:04:19'),
+(20, 'Civil and Coastal Engineering', 'https://cdn.builder.io/api/v1/image/assets/TEMP/a454e3e7241da8cea4069bbd00adfa95c991e85948965c99af7749edf357aa47?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Civil and Coastal Engineering', 5, '#60a5fa', '2025-03-21 11:04:19', '2025-03-21 11:04:19'),
+(21, 'COAST Laboratory', 'https://cdn.builder.io/api/v1/image/assets/TEMP/a454e3e7241da8cea4069bbd00adfa95c991e85948965c99af7749edf357aa47?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'COAST Laboratory', 5, '#22d3ee', '2025-03-21 11:04:19', '2025-03-21 11:04:19');
 
 -- --------------------------------------------------------
 
@@ -453,7 +471,33 @@ INSERT INTO `specializations` (`id`, `name`, `image`, `description`, `collage_id
 (1, 'AI & ML', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Artificial Intelligence & Machine Learning', 2, '#2dd4bf', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
 (2, 'Cyber Security\r\n', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Cyber Security\r\n', 2, '#0369a1', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
 (3, 'Mechanical Engineering', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Mechanical Engineering', 1, '#2dd4bf', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
-(4, 'Electrical & Electronic Engineering', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Electrical & Electronic Engineering', 1, '#0369a1', '2025-03-21 10:56:06', '2025-03-21 10:56:06');
+(4, 'Electrical & Electronic Engineering', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Electrical & Electronic Engineering', 1, '#0369a1', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(5, 'Civil and Coastal Engineering', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Civil and Coastal Engineering', 1, '#60a5fa', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(6, 'Robotics Engineering', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Robotics Engineering', 1, '#71717a', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(7, 'BSc (Hons) Mathematics', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'BSc (Hons) Mathematics', 1, '#f87171', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(8, 'Mathematics with Education', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'BSc (Hons) Mathematics with Education', 1, '#818cf8', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(9, 'Mathematics with Theoretical Physics', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'BSc (Hons) Mathematics with Theoretical Physics', 1, '#22d3ee', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(10, 'Mathematics with Statistics', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'BSc (Hons) Mathematics with Statistics', 1, '#0369a1', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(11, 'Data Science\r\n', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Data Science\r\n', 2, '#fdba74', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(12, 'Web Development', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Web Development\r\n', 2, '#60a5fa', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(13, 'Mobile Development', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Mobile Development', 2, '#22d3ee', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(14, 'Algorithms', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Algorithms', 2, '#71717a', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(15, 'Software Engineering', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Software Engineering', 2, '#f87171', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(16, 'Computer Systems', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Computer Systems', 2, '#818cf8', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(17, 'Networking & Distributed Systems\r\n', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Networking & Distributed Systems', 2, '#0f766e', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(18, 'Game Development', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Game Development', 2, '#fb7185', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(19, 'Human-Computer Interaction', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Human-Computer Interaction', 2, '#06b6d4', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(20, 'Marketing', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Marketing', 3, '#0369a1', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(21, 'Management', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Management', 3, '#2dd4bf', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(22, 'Leadership', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Leadership', 3, '#fdba74', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(23, 'Finance', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Finance', 3, '#60a5fa', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(24, 'Accounting', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Accounting', 3, '#22d3ee', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(25, 'Entrepreneurship', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Entrepreneurship', 3, '#71717a', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(26, 'International Business', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'International Business', 3, '#f87171', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(27, 'Supply Chain Management', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Supply Chain Management', 3, '#818cf8', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(28, 'Information Systems', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Information Systems', 3, '#0f766e', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(29, 'Business Analytics', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Business Analytics', 3, '#fb7185', '2025-03-21 10:56:06', '2025-03-21 10:56:06'),
+(30, 'Human Resource Management', 'https://cdn.builder.io/api/v1/image/assets/TEMP/151a85e43365f24bd6330e3ccd8b89f89eae1deb4aaa1499f30d36ccee20de25?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2', 'Human Resource Management', 3, '#06b6d4', '2025-03-21 10:56:06', '2025-03-21 10:56:06');
 
 -- --------------------------------------------------------
 
@@ -674,13 +718,13 @@ ALTER TABLE `chats_rooms_users`
 -- AUTO_INCREMENT for table `collages`
 --
 ALTER TABLE `collages`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -746,7 +790,7 @@ ALTER TABLE `reviews`
 -- AUTO_INCREMENT for table `specializations`
 --
 ALTER TABLE `specializations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `users`

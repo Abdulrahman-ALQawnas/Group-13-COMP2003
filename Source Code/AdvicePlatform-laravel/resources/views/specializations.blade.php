@@ -30,7 +30,7 @@
         </div>
         @endforeach
       </div>
-        <div class="justify-content-center">
+        <div class="mt-5 d-flex justify-content-center">
             {!! $specializations->links() !!}
         </div>
       @endsection

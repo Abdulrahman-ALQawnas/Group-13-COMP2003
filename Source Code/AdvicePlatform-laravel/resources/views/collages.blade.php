@@ -30,7 +30,7 @@
         </div>
         @endforeach
 </div>
-        <div class="d-flex justify-content-center">
+        <div class="mt-5 d-flex justify-content-center">
             {!! $collages->links() !!}
         </div>
       @endsection
