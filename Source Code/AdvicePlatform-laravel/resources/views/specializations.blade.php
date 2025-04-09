@@ -18,6 +18,12 @@
               </form>
               </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5">
+      @if($specializations->count() == 0)
+        <div class="...">
+          <h2 class="mt-5 text-center">No Specializations Found . . . </h2>
+
+        </div>
+        @else
         @foreach($specializations as $specialization)
         <div class="...">
           <div class="flex flex-col pb-9 rounded-xl border border-solid border-cyan-700 border-opacity-40" style="background-color:{{$specialization->bgColor}}">
@@ -33,4 +39,5 @@
         <div class="mt-5 d-flex justify-content-center">
             {!! $specializations->links() !!}
         </div>
+        @endif
       @endsection
