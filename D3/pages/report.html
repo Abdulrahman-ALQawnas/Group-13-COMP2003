@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report - Plymouth University </title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/tailwind.output.css" />
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+   <script src="../assets/js/init-alpine.js"></script>
+   <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="flex flex-col items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900">
+
+
+      <header class="w-full py-4 bg-white dark:bg-gray-800">
+        <div
+          class="container flex items-center justify-between h-full px-6 mx-auto text-purple-600 dark:text-purple-300"
+        >
+         <a href="./index.html">
+        <img src="../assets/plymouth-logo.png" width="200" alt=""> </a>
+          <!-- Mobile hamburger -->
+          <button
+            class="p-1 mr-5 -ml-1 rounded-md md:hidden focus:outline-none focus:shadow-outline-purple"
+            @click="toggleSideMenu"
+            aria-label="Menu"
+          >
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <!-- Search input -->
+
+          <ul class="flex items-center space-x-6">
+            <!-- Notification Button -->
+            <li class="relative">
+              <button
+                id="notificationBtn"
+                class="relative align-middle focus:outline-none focus:shadow-outline-purple text-white bg-[#2B819F] w-[44px] h-[44px] rounded-full flex justify-center items-center"
+              >
+                <span class="relative">
+                  🔔
+                  <span
+                    id="notificationCount"
+                    class="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full"
+                  >
+                    3
+                  </span>
+                </span>
+              </button>
+
+              <!-- Notification Dropdown -->
+              <div
+                id="notificationDropdown"
+                class="absolute right-0 mt-2 w-64 bg-white shadow-lg rounded-lg p-4 hidden"
+              >
+                <div class="flex items-center justify-between mb-3">
+                  <p class="font-bold text-gray-800">Notifications</p>
+                  <!-- Toggle Switch -->
+                  <label class="flex items-center cursor-pointer">
+                    <input type="checkbox" id="notificationToggle" class="sr-only peer" checked />
+                    <div class="w-10 h-5 bg-gray-300 rounded-full peer-checked:bg-blue-600 relative transition">
+                      <div class="w-4 h-4 bg-white rounded-full absolute top-0.5 left-0.5 peer-checked:left-5 transition"></div>
+                    </div>
+                  </label>
+                </div>
+
+                <ul id="notificationList" class="mt-2 space-y-2">
+                  <li class="p-2 bg-gray-100 rounded-md">New order received</li>
+                  <li class="p-2 bg-gray-100 rounded-md">Payment completed</li>
+                  <li class="p-2 bg-gray-100 rounded-md">New user signed up</li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Profile Button -->
+            <li>
+              <button
+                class="relative align-middle focus:outline-none focus:shadow-outline-purple text-white bg-[#2B819F] w-[131px] h-[44px] rounded-full font-bold"
+              >
+                <a href="/pages/profile.html">Profile</a>
+              </button>
+              <button
+                class="relative align-middle focus:outline-none focus:shadow-outline-purple text-white bg-[#2B819F] w-[131px] h-[44px] rounded-full font-bold"
+              >
+              <a href="/pages/report.html">Report</a>
+              </button>
+            </li>
+          </ul>
+
+
+        </div>
+      </header>
+
+      <div
+        class="h-full overflow-hidden bg-white rounded-lg dark:bg-gray-800 mt-8"
+      >
+
+      <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+        <h2 class="text-2xl font-bold text-center text-gray-700 mb-4">Submit a Report</h2>
+
+        <form action="#" method="POST">
+            <!-- Report Type -->
+            <label for="reportType" class="block text-gray-700 font-medium mb-1">Report Type</label>
+            <select id="reportType" name="reportType" class="w-full p-2 border rounded-lg focus:ring focus:ring-blue-300 mb-4">
+                <option value="">Select a report type</option>
+                <option value="bug">Bug Report</option>
+                <option value="feedback">Feedback</option>
+                <option value="feature">Feature Request</option>
+            </select>
+
+            <!-- Description -->
+            <label for="description" class="block text-gray-700 font-medium mb-1">Description</label>
+            <textarea id="description" name="description" rows="4" class="w-full p-2 border rounded-lg focus:ring focus:ring-blue-300" placeholder="Describe the issue..."></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit" class="w-full bg-[#2B819F] text-white font-bold py-2 px-4 rounded-lg mt-4 hover:bg-[#2B819F]">
+                Submit Report
+            </button>
+        </form>
+    </div>
+      </div>
+
+
+    </div>
+
+
+  </body>
+</html>

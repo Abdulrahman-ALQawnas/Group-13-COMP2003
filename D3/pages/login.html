@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Plymouth University </title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/tailwind.output.css" />
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+   <script src="../assets/js/init-alpine.js"></script>
+   <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="flex flex-col items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900 relative">
+      <!-- Background Image -->
+      <div class="absolute bottom-0 right-8 mr-[10.5rem] z-0">
+        <img src="../assets/img/school-students.png" alt="">
+      </div>
+
+      <header class="w-full py-4 bg-white dark:bg-gray-800 z-10">
+        <div
+          class="container flex items-center justify-between h-full px-6 mx-auto text-purple-600 dark:text-purple-300"
+        >
+
+         <a href="./index.html">
+        <img src="../assets/plymouth-logo.png" width="200" alt=""> </a>
+          <!-- Mobile hamburger -->
+          <button
+            class="p-1 mr-5 -ml-1 rounded-md md:hidden focus:outline-none focus:shadow-outline-purple"
+            @click="toggleSideMenu"
+            aria-label="Menu"
+          >
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <!-- Search input -->
+
+          <ul class="flex items-center flex-shrink-0 space-x-6">
+
+
+
+
+            <li class="relative">
+              <button
+                class="relative align-middle focus:outline-none focus:shadow-outline-purple text-white bg-[#2B819F] w-[131px] h-[44px] rounded-full font-bold"
+
+              >
+              <a href="/pages/profile.html">Profile</a>
+              </button>
+              <button
+                class="relative align-middle focus:outline-none focus:shadow-outline-purple text-white bg-[#2B819F] w-[131px] h-[44px] rounded-full font-bold"
+
+              >
+              <a href="/pages/login.html"> Sign In</a>
+              </button>
+
+            </li>
+
+          </ul>
+        </div>
+      </header>
+
+      <div
+        class="flex-1 h-full max-w-4xl mx-auto overflow-hidden bg-white rounded-lg dark:bg-gray-800 mt-8 z-10"
+      >
+      <h1 class="text-center text-[34px] font-semibold text-[#2B819F]">Plymouth University Guide Website</h1>
+
+        <div class="flex flex-col rounded-none max-w-[585px]">
+          <div
+            class="flex flex-col justify-center px-11 py-20 w-full bg-emerald-50 rounded-[30px] max-md:px-5 max-md:max-w-full"
+          >
+            <div class="flex flex-col max-md:max-w-full">
+              <div
+                class="flex flex-col self-center px-9 pb-3 max-w-full text-center rounded-none w-[343px] max-md:px-5"
+              >
+                <h1 class="self-center text-3xl font-semibold text-black">
+                  Welcome Back
+                </h1>
+                <p class="mt-2.5 text-base font-medium text-black text-opacity-60">
+                  Sign In to Your Account
+                </p>
+              </div>
+              <form class="flex flex-col mt-8 w-full max-md:max-w-full">
+                <div class="flex flex-col w-full max-md:max-w-full">
+                  <div
+                    class="flex flex-col w-full text-lg font-medium text-neutral-400 max-md:max-w-full"
+                  >
+                    <div
+                      class="flex flex-col w-full whitespace-nowrap rounded-xl max-md:max-w-full"
+                    >
+                      <label for="email" class="sr-only">Email</label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="px-4 py-7 bg-white rounded-xl border border-solid border-neutral-400 border-opacity-30 max-md:pr-5 max-md:max-w-full"
+                        placeholder="Email"
+                        required
+                        aria-required="true"
+                      />
+                    </div>
+                    <div
+                      class="flex flex-col mt-4 w-full whitespace-nowrap rounded-none max-md:max-w-full"
+                    >
+                      <label for="password" class="sr-only">Password</label>
+                      <div
+                        class="flex flex-wrap gap-5 justify-between px-4 py-6 bg-white rounded-xl border border-solid border-neutral-400 border-opacity-30 max-md:max-w-full"
+                      >
+                        <input
+                          type="password"
+                          id="password"
+                          name="password"
+                          class="grow bg-transparent border-none outline-none"
+                          placeholder="Password"
+                          required
+                          aria-required="true"
+                        />
+                        <img
+                          loading="lazy"
+                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/2f5a0c318914c31e82782679f2ec7e97b4362eeb8bc6951f3a90bb104b7da971?placeholderIfAbsent=true&apiKey=211755799c724fe59f655beb2610b2c2"
+                          class="object-contain shrink-0 my-auto w-6 aspect-[1.33]"
+                          alt=""
+                          role="presentation"
+                        />
+                      </div>
+                    </div>
+
+                  </div>
+                  <button
+                    type="submit"
+                    class="mt-7 w-full px-4 py-5 text-2xl font-semibold text-white bg-cyan-700 rounded-xl max-md:px-5"
+                  >
+                  <a href="/pages/login.html"> Sign In</a>
+
+                  </button>
+                </div>
+                <div class="flex gap-1 mt-5 max-w-full rounded-lg w-[296px]">
+                  <p class="grow my-auto text-lg leading-none text-black">
+                    Don't Have an account?
+                  </p>
+                  <a
+                    href="/pages/signup.html"
+                    class="gap-3 self-stretch px-0.5 py-1 text-xl font-semibold leading-none text-cyan-700 rounded-lg min-h-[28px]"
+                  >
+                    Sign up
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
