@@ -4,7 +4,7 @@
         class="container flex items-center justify-between h-full px-6 mx-auto text-purple-600 dark:text-purple-300 mt-16"
       >
       <div class="flex items-center gap-4">
-        <p class="text-[20px] font-medium text-[#728990]"><a href="{{route('index')}}"> Home</a></p>  <strong class="text-[20px]"> > </strong>  <p class="text-[20px] font-medium text-[#728990]"><a href="{{route('collages')}}"> Collages </a></p> <strong class="text-[20px]"> > </strong> <p class="text-[20px] font-medium text-[#728990]"><a href="{{route('specializations', $collage_id)}}"> Specializations </a></p> <strong class="text-[20px]"> > </strong> <p class="text-[20px] font-medium text-[#728990]"><a href="{{route('courses', $specialization_id)}}"> Courses </a></p> <strong class="text-[20px]"> > </strong> <p class="text-[#2B819F] text-[22px] font-bold">  Computer Science </p>
+        <p class="text-[20px] font-medium text-[#728990]"><a href="{{route('index')}}"> Home</a></p>  <strong class="text-[20px]"> > </strong>  <p class="text-[20px] font-medium text-[#728990]"><a href="{{route('collages')}}"> Colleges </a></p> <strong class="text-[20px]"> > </strong> <p class="text-[20px] font-medium text-[#728990]"><a href="{{route('specializations', $collage_id)}}"> Specializations </a></p> <strong class="text-[20px]"> > </strong> <p class="text-[20px] font-medium text-[#728990]"><a href="{{route('courses', $specialization_id)}}"> Courses </a></p> <strong class="text-[20px]"> > </strong> <p class="text-[#2B819F] text-[22px] font-bold">  Computer Science </p>
          </div>
 
 
