@@ -140,7 +140,7 @@
                     Already have an account?
                   </p>
                   <a
-                    href="/pages/login.html"
+                    href="{{url('login')}}"
                     class="gap-3 self-stretch px-0.5 py-1 text-xl font-semibold leading-none text-cyan-700 rounded-lg min-h-[28px]"
                   >
                     Sign in
