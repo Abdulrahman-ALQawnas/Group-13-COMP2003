@@ -1,0 +1,9 @@
+1. install XAMPP Server
+2. install composer
+3. Open XAMPP control panel, and start Apache and MySQL
+4. Open the MySQL admin panel and create a database by the following name: advicePlatform_db, then click import and upload the following file:
+c://xampp/htdocs/advicePlatform/advicePlatform_db.sql
+5. Open the project files
+6. Apply the following command: ‘ php artisan serve’
+7. Open the Chrome browser with the following URL: https://localhost:8000
+8. Start using the platform
